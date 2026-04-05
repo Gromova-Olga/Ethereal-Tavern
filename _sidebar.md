@@ -1,15 +1,21 @@
 - [🏠 Главная](/)
 
 - [🧩 Расширения](extensions/README.md)
-  - [Narrative HUD](extensions/narrative-hud.md)
-  - [Chat Exporter](extensions/chat-exporter.md)
+  - [🌐 Narrative HUD](extensions/narrative-hud.md)
+  - [📜 Chat Exporter](extensions/chat-exporter.md)
+  - [🗂️ Chat Organizer](extensions/chat-organizer.md)
+  - [📚 Lorebook Folders](extensions/lorebook-folders.md)
+  - [🎲 Hidden Hub](extensions/hidden-hub.md)
+  - [📖 Lorebook Extractor](extensions/lorebook-extractor.md)
+  - [📝 Advanced Notes](extensions/advanced-notes.md)
 
 - [🎛 Пресеты](presets/README.md)
-  - [Инструкция](presets/install.md)
-  - [Мой основной пак](presets/pack1.md)
+  - [✍🏻Maren’s Red Pen📕 v1.0](presets/pack1.md)
+
 
 - [📖 Лорбуки](lorebooks/README.md)
 
 - [🤖 Боты](bots/README.md)
 
 - [💬 FAQ и поддержка](faq.md)
+  - [Анатомия пресета «Марен»](maren-faq.md)
