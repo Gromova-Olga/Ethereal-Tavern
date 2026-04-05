@@ -25,7 +25,7 @@
   --sidebar-divider: 5px solid #140a05; /* Темный стык сайдбара */
   --sidebar-shadow: 10px 0 20px rgba(0, 0, 0, 0.8); /* Глубокая тень на основной фон */
 
-  --theme-font: 'Optima', 'Segoe UI', 'Candara', sans-serif;
+  --theme-font: "Caveat", cursive;
 }
 
 /* --- ВТОРАЯ ТЕМА: METAL (Метроидвания) --- */
