@@ -9,23 +9,19 @@
   <style>
   /* Применяем текстуру к основному фону сайта */
   body {
-    background-color: #1a1a1a; /* Запасной темный цвет, пока картинка грузится */
-    background-image: url('assets/256_Wood Planks 02.png'); /* Путь к твоей картинке */
-    background-repeat: repeat; /* Та самая команда, которая замостит экран бесшовно */
-    
-    /* Если паттерн слишком контрастный, можно его слегка "приглушить", 
-       смешав с фоновым цветом: */
+    background-color: #1a1a1a;
+    background-image: url('assets/Wood.png'); /* Имя файла БЕЗ пробелов! */
+    background-repeat: repeat;
     background-blend-mode: multiply; 
   }
 
-  /* Если из-за узора текст станет плохо читаться, 
-     можно добавить полупрозрачную подложку под сам контент */
+  /* Полупрозрачная подложка под сам контент */
   .markdown-section {
-    background-color: rgba(0, 0, 0, 0.75); /* Черная подложка с прозрачностью 75% */
+    background-color: rgba(0, 0, 0, 0.75);
     padding: 30px;
-    border-radius: 12px; /* Немного скруглим углы для красоты */
+    border-radius: 12px;
   }
-</style>
+  </style>
 </head>
 <body>
   <div id="app">Загрузка...</div>
@@ -37,7 +33,6 @@
       loadSidebar: true,
       subMaxLevel: 3,
       auto2top: true,
-      // Эти две настройки говорят сайту: "сверни меню при загрузке"
       sidebarDisplayLevel: 1,
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md'
