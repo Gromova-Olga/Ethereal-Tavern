@@ -31,6 +31,6 @@
 2. Откройте SillyTavern, перейдите во вкладку **Настройки ответа ИИ**.
 3. Нажмите кнопку импорта и выберите скачанный файл.
 
-<a href="presets/marens-red-pen.json" download="marens-red-pen.json" style="font-size: 1.2em; font-weight: bold; text-decoration: underline; color: var(--text-links);">📦 Скачать пресет "Марен" (.json)</a>
+<a href="presets/marens-red-pen.json" download="marens-red-pen.json" target="_blank" style="font-size: 1.2em; font-weight: bold; text-decoration: underline; color: var(--text-links);">📦 Скачать пресет "Марен" (.json)</a>
 
 *(Если файл не скачивается, а открывается как текст — нажмите на ссылку правой кнопкой мыши и выберите «Сохранить ссылку как...»)*
