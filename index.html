@@ -4,22 +4,25 @@
   <meta charset="UTF-8">
   <title>Мои ST-инструменты</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css">
 </head>
 <body>
   <div id="app">Загрузка...</div>
   <script>
     window.$docsify = {
-      name: 'Ethereal Tavern',
+      name: 'SillyTavern Hub',
       repo: 'https://github.com/gromova-olga/Ethereal-Tavern',
-      themeColor: '#8a2be2', // Сюда вставляется любой HEX-код
       loadSidebar: true,
+      alias: {
+      '/.*/_sidebar.md': '/_sidebar.md'
+      },
       subMaxLevel: 3,
-      auto2top: true,
-      search: { paths: 'auto', placeholder: 'Поиск...', noData: 'Ничего не найдено' }
+      sidebarDisplayLevel: 1, // Это заставит списки быть свернутыми по умолчанию
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 </body>
 </html>
