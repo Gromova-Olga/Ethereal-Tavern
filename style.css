@@ -44,7 +44,7 @@ body.theme-metal {
   --bg-content-tint: rgba(20, 25, 30, 0.85);
 
   /* Текст */
-  --text-main: #00ffcc;
+  --text-main: #0e1e1bfa;
 
   /* Новые переменные для рамочек и теней (Неон и металл) */
   --nav-border: 2px solid #00ffcc; /* Тонкая неоновая или стальная рамка */
@@ -160,4 +160,8 @@ body.theme-metal {
 
 .sidebar-toggle {
   background: transparent !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--theme-font) !important;
 }
