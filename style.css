@@ -190,7 +190,7 @@ h1, h2, h3, h4, h5, h6 {
 /* --- Настройки для Металлической темы --- */
 body.theme-metal {
   --text-main: #e0f8f5; /* Делаем основной текст светло-светло-мятным, почти белым, чтобы не резал глаза */
-  --text-headers: #00ffcc; /* А вот заголовки оставляем ярким неоном */
+  --text-headers: #113b33; /* А вот заголовки оставляем ярким неоном */
   --text-links: #ff0055; /* Контрастный киберпанк-розовый для ссылок */
 }
 
@@ -254,4 +254,20 @@ body.theme-metal .markdown-section {
 .sidebar-nav ul li a {
   color: var(--text-main) !important;
   text-shadow: none !important; 
+}
+
+/* --- Чиним жирный текст и курсив во всех темах --- */
+.markdown-section strong, 
+.markdown-section b {
+  /* Жирный текст пусть будет ярким, как заголовки */
+  color: var(--text-headers) !important; 
+  font-weight: bold !important;
+  opacity: 1 !important;
+}
+
+.markdown-section em, 
+.markdown-section i {
+  /* Курсив красим в цвет основного текста, чтобы он не пропадал */
+  color: var(--text-main) !important;
+  opacity: 1 !important;
 }
