@@ -19,6 +19,11 @@
 
   /* Текст */
   --text-main: #2b1d14;
+
+  /* Новые переменные для рамочек и теней */
+  --nav-border: 4px solid #2a160d; /* Очень темное дерево для меню */
+  --sidebar-divider: 5px solid #140a05; /* Темный стык сайдбара */
+  --sidebar-shadow: 10px 0 20px rgba(0, 0, 0, 0.8); /* Глубокая тень на основной фон */
 }
 
 /* --- ВТОРАЯ ТЕМА: METAL (Метроидвания) --- */
@@ -38,6 +43,12 @@ body.theme-metal {
 
   /* Текст */
   --text-main: #00ffcc;
+
+  /* Новые переменные для рамочек и теней (Неон и металл) */
+  --nav-border: 2px solid #00ffcc; /* Тонкая неоновая или стальная рамка */
+  --sidebar-divider: 2px solid #00ffcc; /* Неоновый стык сайдбара */
+  /* Светящаяся тень, чтобы отделить сайдбар от фона */
+  --sidebar-shadow: 5px 0 25px rgba(0, 255, 204, 0.15); 
 }
 
 /* ==========================================
@@ -59,26 +70,30 @@ body.theme-metal {
 .sidebar {
   background-color: var(--bg-sidebar-tint);
   background-image: var(--bg-sidebar);
-  background-size: auto; /* Отменяем растягивание */
-  background-repeat: repeat; /* Зацикливаем картинку (плитка) */
+  background-size: auto;
+  background-repeat: repeat;
   background-blend-mode: overlay;
+  
+  /* Разделитель и тень */
+  border-right: var(--sidebar-divider);
+  box-shadow: var(--sidebar-shadow);
 }
 
-/* Блок поиска */
+/* Блок поиска (Спрятан) */
 .search {
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(4px);
+  display: none !important;
 }
 
 /* Навигация (список ссылок) */
 .sidebar-nav {
   background-color: var(--bg-sidebar-nav-tint);
   background-image: var(--bg-sidebar-nav);
-  background-size: cover;
+  background-size: auto; /* Отменяем растягивание картинки */
+  background-repeat: repeat; /* Заставляем её повторяться плиткой */
   background-blend-mode: overlay;
   margin-top: 10px;
   padding: 12px;
-  border: 4px solid #3e2723; /* Темная деревянная рамочка */
+  border: var(--nav-border); /* Рамка меняется в зависимости от темы */
   border-radius: 8px;
 }
 
@@ -105,19 +120,19 @@ body.theme-metal {
   padding-top: 20px;
 }
 
-/* Вешаем всю красоту только на саму плашку с текстом */
+/* Основной контент (Плашка с текстом) */
 .markdown-section {
   background-color: var(--bg-content-tint);
   background-image: var(--bg-content);
-  background-size: cover; /* Или repeat, если это бесшовная бумага */
-  background-position: center;
+  background-size: auto; /* Отменяем зум */
+  background-repeat: repeat; /* Повторяем текстуру плиткой */
   color: var(--text-main);
   
-  max-width: 90%; /* Вот здесь регулируется ширина в бока! (было 1200px) */
+  max-width: 90%;
   padding: 40px;
   border-radius: 12px;
-  margin: 0 auto; /* Центрируем плашку */
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5); /* Тень под самой плашкой */
 }
 
 /* Адаптивность для мобильных */
