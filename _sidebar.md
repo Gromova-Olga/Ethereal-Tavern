@@ -1,6 +1,6 @@
 - [🏠 Главная](/)
 
-- [🧩 Расширения](extensions/README.md)
+- 🧩 Расширения
   - [🌐 Narrative HUD](extensions/narrative-hud.md)
   - [📜 Chat Exporter](extensions/chat-exporter.md)
   - [🗂️ Chat Organizer](extensions/chat-organizer.md)
@@ -9,7 +9,7 @@
   - [📖 Lorebook Extractor](extensions/lorebook-extractor.md)
   - [📝 Advanced Notes](extensions/advanced-notes.md)
 
-- [🎛 Пресеты](presets/README.md)
+- 🎛 Пресеты
   - [✍🏻Maren’s Red Pen📕 v1.0](presets/pack1.md)
 
 
@@ -17,5 +17,5 @@
 
 - [🤖 Боты](bots/README.md)
 
-- [💬 FAQ и поддержка](faq.md)
-  - [Анатомия пресета «Марен»](maren-faq.md)
+- 💬 FAQ и поддержка
+  - [Анатомия пресета «Марен»](faq/maren-faq.md)
