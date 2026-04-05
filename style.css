@@ -24,11 +24,11 @@
 /* --- ВТОРАЯ ТЕМА: METAL (Метроидвания) --- */
 body.theme-metal {
   /* Фоны-картинки */
-  --bg-sidebar: url('assets/metal_dark.png');
-  --bg-sidebar-nav: url('assets/metal_panel.png');
-  --bg-app-name: url('assets/metal_header.png');
-  --bg-content: url('assets/metal_mesh.png');
-  --bg-body: url('assets/wood.png');
+  --bg-sidebar: url('assets/crate.png');
+  --bg-sidebar-nav: url('assets/metal1.png');
+  /*--bg-app-name: url('assets/metal_header.png');*/
+  --bg-content: url('assets/metal2.png');
+  --bg-body: url('assets/pipes.png');
 
   /* Цвета-подложки */
   --bg-sidebar-tint: rgba(15, 20, 25, 0.85);
