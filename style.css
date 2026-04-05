@@ -5,10 +5,10 @@
 /* --- ТЕМА ПО УМОЛЧАНИЮ: WOOD (Дерево) --- */
 :root {
   /* Фоны-картинки */
+  --bg-body: url('assets/wood.png');
   --bg-sidebar: url('assets/brick.png');
   --bg-sidebar-nav: url('assets/paper2.png');
   --bg-content: url('assets/paper1.jpg');
-  --bg-body: url('assets/wood.png');
   --bg-app-name: url('assets/hedge.PNG');
 
   /* Цвета-подложки (полупрозрачные для читаемости текста) */
@@ -30,8 +30,8 @@
 body.theme-metal {
   /* Фоны-картинки */
   --bg-sidebar: url('assets/crate.png');
-  --bg-sidebar-nav: url('assets/metal4.png');
-  --bg-content: url('assets/metal4.png');
+  --bg-sidebar-nav: url('assets/grey.png');
+  --bg-content: url('assets/grey.png');
   --bg-body: url('assets/pipes.png');
   --bg-app-name: url('assets/warn.PNG');
 
