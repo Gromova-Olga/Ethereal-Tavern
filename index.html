@@ -4,21 +4,25 @@
   <meta charset="UTF-8">
   <title>Мои ST-инструменты</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
 </head>
 <body>
   <div id="app">Загрузка...</div>
   <script>
     window.$docsify = {
-      name: 'SillyTavern Hub',
+      name: 'Ethereal Tavern',
       repo: 'https://github.com/gromova-olga/Ethereal-Tavern',
+      themeColor: '#8a2be2', 
       loadSidebar: true,
-      alias: {
-      '/.*/_sidebar.md': '/_sidebar.md'
-      },
       subMaxLevel: 3,
-      sidebarDisplayLevel: 1, // Это заставит списки быть свернутыми по умолчанию
+      auto2top: true,
+      // Эти две настройки говорят сайту: "сверни меню при загрузке"
+      sidebarDisplayLevel: 1,
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      },
+      search: { paths: 'auto', placeholder: 'Поиск...', noData: 'Ничего не найдено' }
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
