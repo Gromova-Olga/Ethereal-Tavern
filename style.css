@@ -9,6 +9,7 @@
   --bg-sidebar-nav: url('assets/paper2.png');
   --bg-app-name: url('assets/fol.png');
   --bg-content: url('assets/paper.png');
+  --bg-body: url('assets/wood.png');
 
   /* Цвета-подложки (полупрозрачные для читаемости текста) */
   --bg-sidebar-tint: rgba(44, 30, 22, 0.7);
@@ -27,6 +28,7 @@ body.theme-metal {
   --bg-sidebar-nav: url('assets/metal_panel.png');
   --bg-app-name: url('assets/metal_header.png');
   --bg-content: url('assets/metal_mesh.png');
+  --bg-body: url('assets/wood.png');
 
   /* Цвета-подложки */
   --bg-sidebar-tint: rgba(15, 20, 25, 0.85);
@@ -45,6 +47,8 @@ body.theme-metal {
 /* Весь фон страницы (резерв, если картинки не загрузятся) */
 body {
   background-color: #1a110c;
+  background-image: var(--bg-body);
+  background-repeat: repeat;
   margin: 0;
 }
 body.theme-metal {
@@ -53,10 +57,10 @@ body.theme-metal {
 
 /* Боковая панель */
 .sidebar {
-  background: var(--bg-sidebar-tint);
+  background-color: var(--bg-sidebar-tint);
   background-image: var(--bg-sidebar);
-  background-size: cover;
-  background-position: center;
+  background-size: auto; /* Отменяем растягивание */
+  background-repeat: repeat; /* Зацикливаем картинку (плитка) */
   background-blend-mode: overlay;
 }
 
@@ -68,13 +72,20 @@ body.theme-metal {
 
 /* Навигация (список ссылок) */
 .sidebar-nav {
-  background: var(--bg-sidebar-nav-tint);
+  background-color: var(--bg-sidebar-nav-tint);
   background-image: var(--bg-sidebar-nav);
   background-size: cover;
   background-blend-mode: overlay;
   margin-top: 10px;
   padding: 12px;
+  border: 4px solid #3e2723; /* Темная деревянная рамочка */
   border-radius: 8px;
+}
+
+/* Красим ссылки в меню */
+.sidebar-nav ul li a {
+  color: var(--text-main);
+  font-weight: bold;
 }
 
 /* Шапка с названием */
@@ -88,18 +99,33 @@ body.theme-metal {
   font-weight: bold;
 }
 
-/* Основной контент */
-.content, .markdown-section {
-  background: var(--bg-content-tint);
+/* Делаем внешний контейнер просто прозрачной оберткой */
+.content {
+  max-width: 100%;
+  padding-top: 20px;
+}
+
+/* Вешаем всю красоту только на саму плашку с текстом */
+.markdown-section {
+  background-color: var(--bg-content-tint);
   background-image: var(--bg-content);
-  background-size: cover;
+  background-size: cover; /* Или repeat, если это бесшовная бумага */
   background-position: center;
   color: var(--text-main);
-  max-width: 1200px;
+  
+  max-width: 90%; /* Вот здесь регулируется ширина в бока! (было 1200px) */
   padding: 40px;
   border-radius: 12px;
-  margin: 20px auto;
+  margin: 0 auto; /* Центрируем плашку */
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+  .markdown-section {
+    max-width: 95%;
+    padding: 20px;
+  }
 }
 
 /* Адаптивность для мобильных */
@@ -109,4 +135,8 @@ body.theme-metal {
     padding: 20px;
     border-radius: 8px;
   }
+}
+
+.sidebar-toggle {
+  background: transparent !important;
 }
