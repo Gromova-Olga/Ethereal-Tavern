@@ -6,6 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+  <style>
+  /* Применяем текстуру к основному фону сайта */
+  body {
+    background-color: #1a1a1a; /* Запасной темный цвет, пока картинка грузится */
+    background-image: url('assets/256_Wood Planks 02.png'); /* Путь к твоей картинке */
+    background-repeat: repeat; /* Та самая команда, которая замостит экран бесшовно */
+    
+    /* Если паттерн слишком контрастный, можно его слегка "приглушить", 
+       смешав с фоновым цветом: */
+    background-blend-mode: multiply; 
+  }
+
+  /* Если из-за узора текст станет плохо читаться, 
+     можно добавить полупрозрачную подложку под сам контент */
+  .markdown-section {
+    background-color: rgba(0, 0, 0, 0.75); /* Черная подложка с прозрачностью 75% */
+    padding: 30px;
+    border-radius: 12px; /* Немного скруглим углы для красоты */
+  }
+</style>
 </head>
 <body>
   <div id="app">Загрузка...</div>
