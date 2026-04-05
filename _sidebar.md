@@ -2,7 +2,7 @@
 
 - [🧩 Расширения](extensions/README.md)
   - [Narrative HUD](extensions/narrative-hud.md)
-  - [Chat Exporter](chat-exporter.md)
+  - [Chat Exporter](extensions/chat-exporter.md)
 
 - [🎛 Пресеты](presets/README.md)
   - [Инструкция](presets/install.md)
