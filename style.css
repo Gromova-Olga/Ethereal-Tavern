@@ -271,3 +271,11 @@ body.theme-metal .markdown-section {
   color: var(--text-main) !important;
   opacity: 1 !important;
 }
+
+/* --- Убираем черные плашки у инлайн-кода (кнопки, горячие клавиши) --- */
+.markdown-section :not(pre) > code {
+  background-color: transparent !important; /* Делаем фон прозрачным */
+  color: var(--text-headers) !important; /* Красим текст в цвет заголовков, чтобы он выделялся */
+  font-weight: bold;
+  padding: 0 !important; /* Убираем лишние отступы от старого фона */
+}
