@@ -31,6 +31,6 @@
 2. Откройте SillyTavern, перейдите во вкладку **Настройки ответа ИИ**.
 3. Нажмите кнопку импорта и выберите скачанный файл.
 
-[📦 Скачать пресет «Марен» (.json)](https://raw.githubusercontent.com/Gromova-Olga/Ethereal-Tavern/main/presets/marens-red-pen.json)
+[📦 Скачать пресет «Марен» (.json)](https://raw.githubusercontent.com/Gromova-Olga/Ethereal-Tavern/main/presets/maren-red-pen.json)
 
 > 💡 Если браузер открывает JSON как текст: нажми на ссылку правой кнопкой мыши → `Сохранить ссылку как...`
