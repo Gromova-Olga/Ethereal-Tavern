@@ -165,3 +165,73 @@ body.theme-metal {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--theme-font) !important;
 }
+
+/* ==========================================
+   ИСПРАВЛЕНИЕ ШРИФТОВ И КОНТРАСТНОСТИ
+   ========================================== */
+
+/* --- Настройки для Деревянной темы (по умолчанию) --- */
+:root {
+  --text-main: #140a05; /* Почти черный, очень темное дерево для максимального контраста */
+  --text-headers: #3e2723; /* Насыщенный коричневый для заголовков */
+  --text-links: #8d6e63; /* Выделяющийся цвет для ссылок */
+}
+
+/* Прицельно увеличиваем шрифт и добавляем читаемость для дерева */
+.markdown-section {
+  font-size: 20px; /* Увеличиваем базовый размер (подбери, если будет слишком крупно) */
+  line-height: 1.6; /* Делаем строчки чуть просторнее */
+  font-weight: 500; /* Делаем рукописный шрифт чуть толще */
+  /* Хитрый трюк: легкое белое свечение вокруг букв, чтобы отделить от узора бумаги */
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.6); 
+}
+
+
+/* --- Настройки для Металлической темы --- */
+body.theme-metal {
+  --text-main: #e0f8f5; /* Делаем основной текст светло-светло-мятным, почти белым, чтобы не резал глаза */
+  --text-headers: #00ffcc; /* А вот заголовки оставляем ярким неоном */
+  --text-links: #ff0055; /* Контрастный киберпанк-розовый для ссылок */
+}
+
+/* Возвращаем стандартный размер для рубленого шрифта */
+body.theme-metal .markdown-section {
+  font-size: 16px; 
+  font-weight: normal;
+  /* Темная тень под текстом, чтобы он не сливался со светлыми царапинами на металле */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9); 
+}
+
+
+/* --- Жестко применяем цвета ко всем элементам Docsify --- */
+.markdown-section p, 
+.markdown-section ul, 
+.markdown-section ol {
+  color: var(--text-main) !important;
+}
+
+.markdown-section h1, 
+.markdown-section h2, 
+.markdown-section h3, 
+.markdown-section h4, 
+.markdown-section h5, 
+.markdown-section h6 {
+  color: var(--text-headers) !important;
+  font-weight: bold;
+}
+
+.markdown-section a {
+  color: var(--text-links);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.markdown-section a:hover {
+  text-decoration: underline;
+}
+
+/* Чиним цвета в боковом меню, если они тоже сливались */
+.sidebar-nav ul li a {
+  color: var(--text-main) !important;
+  text-shadow: none; /* В меню тень обычно не нужна */
+}
