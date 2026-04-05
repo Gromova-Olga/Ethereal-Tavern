@@ -5,7 +5,7 @@
 /* --- ТЕМА ПО УМОЛЧАНИЮ: WOOD (Дерево) --- */
 :root {
   /* Фоны-картинки */
-  --bg-body: url('assets/wood.png');
+  --bg-body: url('assets/wood12.png');
   --bg-sidebar: url('assets/brick.png');
   --bg-sidebar-nav: url('assets/paper2.png');
   --bg-content: url('assets/paper1.jpg');
@@ -24,6 +24,8 @@
   --nav-border: 4px solid #2a160d; /* Очень темное дерево для меню */
   --sidebar-divider: 5px solid #140a05; /* Темный стык сайдбара */
   --sidebar-shadow: 10px 0 20px rgba(0, 0, 0, 0.8); /* Глубокая тень на основной фон */
+
+  --theme-font: 'Optima', 'Segoe UI', 'Candara', sans-serif;
 }
 
 /* --- ВТОРАЯ ТЕМА: METAL (Метроидвания) --- */
@@ -49,6 +51,8 @@ body.theme-metal {
   --sidebar-divider: 2px solid #00ffcc; /* Неоновый стык сайдбара */
   /* Светящаяся тень, чтобы отделить сайдбар от фона */
   --sidebar-shadow: 5px 0 25px rgba(0, 255, 204, 0.15); 
+
+  --theme-font: 'Orbitron', sans-serif;
 }
 
 /* ==========================================
@@ -61,6 +65,7 @@ body {
   background-image: var(--bg-body);
   background-repeat: repeat;
   margin: 0;
+  font-family: var(--theme-font);
 }
 body.theme-metal {
   background-color: #0d1117;
