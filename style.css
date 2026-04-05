@@ -204,12 +204,15 @@ body.theme-metal .markdown-section {
 
 
 /* --- Жестко применяем цвета ко всем элементам Docsify --- */
+
+/* Чиним обычный текст */
 .markdown-section p, 
 .markdown-section ul, 
 .markdown-section ol {
   color: var(--text-main) !important;
 }
 
+/* Чиним бледные заголовки в самом тексте */
 .markdown-section h1, 
 .markdown-section h2, 
 .markdown-section h3, 
@@ -217,12 +220,14 @@ body.theme-metal .markdown-section {
 .markdown-section h5, 
 .markdown-section h6 {
   color: var(--text-headers) !important;
-  font-weight: bold;
+  font-weight: bold !important;
+  opacity: 1 !important; /* Убиваем встроенную прозрачность из dark.css */
 }
 
+/* Чиним ссылки в тексте */
 .markdown-section a {
-  color: var(--text-links);
-  font-weight: bold;
+  color: var(--text-links) !important;
+  font-weight: bold !important;
   text-decoration: none;
 }
 
@@ -230,8 +235,17 @@ body.theme-metal .markdown-section {
   text-decoration: underline;
 }
 
-/* Чиним цвета в боковом меню, если они тоже сливались */
+/* --- ЧИНИМ САЙДБАР --- */
+
+/* Красим "неактивные" заголовки (аккордеоны без ссылок) */
+.sidebar-nav ul li {
+  color: var(--text-main) !important;
+  font-weight: bold !important;
+  opacity: 1 !important;
+}
+
+/* Красим кликабельные ссылки в меню */
 .sidebar-nav ul li a {
   color: var(--text-main) !important;
-  text-shadow: none; /* В меню тень обычно не нужна */
+  text-shadow: none !important; 
 }
