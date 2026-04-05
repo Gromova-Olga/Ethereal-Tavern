@@ -1,59 +1,112 @@
-/* Тема по умолчанию: РПГ (Дерево и Бумага) */
+/* ==========================================
+   1. СИСТЕМА ПЕРЕМЕННЫХ ПО ТЕМАМ
+   ========================================== */
+
+/* --- ТЕМА ПО УМОЛЧАНИЮ: WOOD (Дерево) --- */
 :root {
-  --theme-bg-image: url('assets/wood.png'); /* Твоя деревянная текстура */
-  --theme-content-bg: #f4ead5; /* Цвет старой бумаги для плашки */
-  --theme-text-color: #2b1d14; /* Темные чернила для текста */
+  /* Фоны-картинки */
+  --bg-sidebar: url('assets/brick.png');
+  --bg-sidebar-nav: url('assets/paper2.png');
+  --bg-app-name: url('assets/fol.png');
+  --bg-content: url('assets/paper.png');
+
+  /* Цвета-подложки (полупрозрачные для читаемости текста) */
+  --bg-sidebar-tint: rgba(44, 30, 22, 0.7);
+  --bg-sidebar-nav-tint: rgba(255, 255, 255, 0.15);
+  --bg-app-name-tint: rgba(0, 0, 0, 0.4);
+  --bg-content-tint: #f4ead5;
+
+  /* Текст */
+  --text-main: #2b1d14;
 }
 
-/* Вторая тема: Метроидвания / Металл 
-   (Сработает, когда мы скриптом добавим класс theme-metal) */
+/* --- ВТОРАЯ ТЕМА: METAL (Метроидвания) --- */
 body.theme-metal {
-  --theme-bg-image: url('assets/metal.png'); /* Закинь картинку металла в assets */
-  --theme-content-bg: rgba(20, 25, 30, 0.85); /* Темный металл для плашки */
-  --theme-text-color: #00ffcc; /* Неоновый текст */
+  /* Фоны-картинки */
+  --bg-sidebar: url('assets/metal_dark.png');
+  --bg-sidebar-nav: url('assets/metal_panel.png');
+  --bg-app-name: url('assets/metal_header.png');
+  --bg-content: url('assets/metal_mesh.png');
+
+  /* Цвета-подложки */
+  --bg-sidebar-tint: rgba(15, 20, 25, 0.85);
+  --bg-sidebar-nav-tint: rgba(0, 255, 204, 0.08);
+  --bg-app-name-tint: rgba(0, 0, 0, 0.5);
+  --bg-content-tint: rgba(20, 25, 30, 0.85);
+
+  /* Текст */
+  --text-main: #00ffcc;
 }
 
-/* Применяем наши переменные к сайту */
+/* ==========================================
+   2. ПРИМЕНЕНИЕ ФОНОВ К ЭЛЕМЕНТАМ
+   ========================================== */
+
+/* Весь фон страницы (резерв, если картинки не загрузятся) */
 body {
-  background-image: var(--theme-bg-image);
-  background-repeat: repeat;
-  background-blend-mode: normal; /* Можно убрать multiply, если картинки хорошие */
+  background-color: #1a110c;
+  margin: 0;
+}
+body.theme-metal {
+  background-color: #0d1117;
 }
 
-.markdown-section {
-  background-color: var(--theme-content-bg);
-  color: var(--theme-text-color);
+/* Боковая панель */
+.sidebar {
+  background: var(--bg-sidebar-tint);
+  background-image: var(--bg-sidebar);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
 }
-/* --- 4. РАСШИРЯЕМ ГЛАВНЫЙ БЛОК С ТЕКСТОМ --- */
-.markdown-section {
-  max-width: 1200px; /* Было 800px. Можно написать 90%, чтобы тянулось по экрану */
+
+/* Блок поиска */
+.search {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+/* Навигация (список ссылок) */
+.sidebar-nav {
+  background: var(--bg-sidebar-nav-tint);
+  background-image: var(--bg-sidebar-nav);
+  background-size: cover;
+  background-blend-mode: overlay;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+/* Шапка с названием */
+.app-name {
+  background: var(--bg-app-name-tint);
+  background-image: var(--bg-app-name);
+  background-size: cover;
+  background-blend-mode: multiply;
+  padding: 15px 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Основной контент */
+.content, .markdown-section {
+  background: var(--bg-content-tint);
+  background-image: var(--bg-content);
+  background-size: cover;
+  background-position: center;
+  color: var(--text-main);
+  max-width: 1200px;
   padding: 40px;
   border-radius: 12px;
-  /* Цвета пока не пишем, они будут меняться в зависимости от темы (см. пункт 5) */
+  margin: 20px auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
-/* --- 2. ФОНЫ ДЛЯ ЭЛЕМЕНТОВ САЙДБАРА --- */
-.sidebar {
-  /* Общий фон всей боковой панели */
-  background-color: #2c1e16; 
-}
-
-.app-name {
-  /* Шапка с названием сайта */
-  background: rgba(0, 0, 0, 0.4); 
-  padding: 15px 0;
-}
-
-.search {
-  /* Блок с полем поиска */
-  background: rgba(0, 0, 0, 0.6); 
-}
-
-/* --- 3. ОТДЕЛЬНЫЙ ФОН ДЛЯ НАВИГАЦИИ --- */
-.sidebar-nav {
-  /* Фон только под самим списком ссылок */
-  background: rgba(255, 255, 255, 0.05); 
-  margin-top: 10px;
-  padding: 10px;
-  border-radius: 8px; /* Немного скруглим для красоты */
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+  .content, .markdown-section {
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+  }
 }
