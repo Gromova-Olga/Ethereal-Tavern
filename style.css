@@ -7,9 +7,9 @@
   /* Фоны-картинки */
   --bg-sidebar: url('assets/brick.png');
   --bg-sidebar-nav: url('assets/paper2.png');
-  --bg-app-name: url('assets/fol.png');
-  --bg-content: url('assets/paper.png');
+  --bg-content: url('assets/paper1.jpg');
   --bg-body: url('assets/wood.png');
+  --bg-app-name: url('assets/hedge.PNG');
 
   /* Цвета-подложки (полупрозрачные для читаемости текста) */
   --bg-sidebar-tint: rgba(44, 30, 22, 0.7);
@@ -31,9 +31,9 @@ body.theme-metal {
   /* Фоны-картинки */
   --bg-sidebar: url('assets/crate.png');
   --bg-sidebar-nav: url('assets/metal1.png');
-  /*--bg-app-name: url('assets/metal_header.png');*/
   --bg-content: url('assets/metal2.png');
   --bg-body: url('assets/pipes.png');
+  --bg-app-name: url('assets/warn.PNG');
 
   /* Цвета-подложки */
   --bg-sidebar-tint: rgba(15, 20, 25, 0.85);
