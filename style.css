@@ -212,16 +212,22 @@ body.theme-metal .markdown-section {
   color: var(--text-main) !important;
 }
 
-/* Чиним бледные заголовки в самом тексте */
+/* Чиним бледные заголовки в самом тексте и ВСЁ, что внутри них */
 .markdown-section h1, 
 .markdown-section h2, 
 .markdown-section h3, 
 .markdown-section h4, 
 .markdown-section h5, 
-.markdown-section h6 {
+.markdown-section h6,
+.markdown-section h1 *, 
+.markdown-section h2 *, 
+.markdown-section h3 *, 
+.markdown-section h4 *, 
+.markdown-section h5 *, 
+.markdown-section h6 * {
   color: var(--text-headers) !important;
   font-weight: bold !important;
-  opacity: 1 !important; /* Убиваем встроенную прозрачность из dark.css */
+  opacity: 1 !important;
 }
 
 /* Чиним ссылки в тексте */
