@@ -43,6 +43,16 @@
 
     // Помещаем кнопку на страницу
     document.body.appendChild(themeBtn);
+    // Переключение темы (добавь вызов по клику на кнопку или при загрузке)
+    function setTheme(theme) {
+      if (theme === 'metal') {
+        document.body.classList.add('theme-metal');
+    } else {
+      document.body.classList.remove('theme-metal');
+    }
+  }
+  // Пример автовыбора (можно убрать)
+  // setTheme('metal'); 
 </script>
 </body>
 </html>
