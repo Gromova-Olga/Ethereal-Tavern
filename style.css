@@ -1,0 +1,59 @@
+/* Тема по умолчанию: РПГ (Дерево и Бумага) */
+:root {
+  --theme-bg-image: url('assets/wood.png'); /* Твоя деревянная текстура */
+  --theme-content-bg: #f4ead5; /* Цвет старой бумаги для плашки */
+  --theme-text-color: #2b1d14; /* Темные чернила для текста */
+}
+
+/* Вторая тема: Метроидвания / Металл 
+   (Сработает, когда мы скриптом добавим класс theme-metal) */
+body.theme-metal {
+  --theme-bg-image: url('assets/metal.png'); /* Закинь картинку металла в assets */
+  --theme-content-bg: rgba(20, 25, 30, 0.85); /* Темный металл для плашки */
+  --theme-text-color: #00ffcc; /* Неоновый текст */
+}
+
+/* Применяем наши переменные к сайту */
+body {
+  background-image: var(--theme-bg-image);
+  background-repeat: repeat;
+  background-blend-mode: normal; /* Можно убрать multiply, если картинки хорошие */
+}
+
+.markdown-section {
+  background-color: var(--theme-content-bg);
+  color: var(--theme-text-color);
+}
+/* --- 4. РАСШИРЯЕМ ГЛАВНЫЙ БЛОК С ТЕКСТОМ --- */
+.markdown-section {
+  max-width: 1200px; /* Было 800px. Можно написать 90%, чтобы тянулось по экрану */
+  padding: 40px;
+  border-radius: 12px;
+  /* Цвета пока не пишем, они будут меняться в зависимости от темы (см. пункт 5) */
+}
+
+/* --- 2. ФОНЫ ДЛЯ ЭЛЕМЕНТОВ САЙДБАРА --- */
+.sidebar {
+  /* Общий фон всей боковой панели */
+  background-color: #2c1e16; 
+}
+
+.app-name {
+  /* Шапка с названием сайта */
+  background: rgba(0, 0, 0, 0.4); 
+  padding: 15px 0;
+}
+
+.search {
+  /* Блок с полем поиска */
+  background: rgba(0, 0, 0, 0.6); 
+}
+
+/* --- 3. ОТДЕЛЬНЫЙ ФОН ДЛЯ НАВИГАЦИИ --- */
+.sidebar-nav {
+  /* Фон только под самим списком ссылок */
+  background: rgba(255, 255, 255, 0.05); 
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px; /* Немного скруглим для красоты */
+}

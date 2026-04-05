@@ -6,22 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
-  <style>
-  /* Применяем текстуру к основному фону сайта */
-  body {
-    background-color: #1a1a1a;
-    background-image: url('assets/Wood.png'); /* Имя файла БЕЗ пробелов! */
-    background-repeat: repeat;
-    background-blend-mode: multiply; 
-  }
-
-  /* Полупрозрачная подложка под сам контент */
-  .markdown-section {
-    background-color: rgba(0, 0, 0, 0.75);
-    padding: 30px;
-    border-radius: 12px;
-  }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="app">Загрузка...</div>
@@ -43,5 +28,21 @@
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <script>
+    // Создаем плавающую кнопку
+    const themeBtn = document.createElement('button');
+    themeBtn.innerText = '🌗 Сменить тему';
+  
+    // Быстрый дизайн кнопки прямо в скрипте, чтобы она висела в углу
+    themeBtn.style.cssText = 'position: fixed; bottom: 20px; right: 20px; z-index: 999; padding: 10px 15px; background: #333; color: #fff; border: 2px solid #555; border-radius: 8px; cursor: pointer; font-family: inherit; font-weight: bold;';
+
+    // Вешаем клик: добавляем или убираем класс 'theme-metal' у всего сайта
+    themeBtn.onclick = () => {
+      document.body.classList.toggle('theme-metal');
+    };
+
+    // Помещаем кнопку на страницу
+    document.body.appendChild(themeBtn);
+</script>
 </body>
 </html>
