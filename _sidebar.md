@@ -11,7 +11,7 @@
 
 - 🎛 Пресеты
   - [✍🏻Maren’s Red Pen📕 v1.0](presets/pack1.md)
-  - [✍🏻Maren’s Red Pen📕 v1.5](preset/pack2.md)
+  - [✍🏻Maren’s Red Pen📕 v1.5](presets/pack2.md)
 
 
 - [📖 Лорбуки](lorebooks/README.md)
