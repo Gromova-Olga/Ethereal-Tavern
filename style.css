@@ -66,6 +66,8 @@ body {
   background-repeat: repeat;
   margin: 0;
   font-family: var(--theme-font);
+  min-height: 100vh; /* Заставляет body всегда быть не меньше высоты экрана */
+  background-attachment: fixed; /* Привязывает фон к экрану, чтобы он не уезжал при скролле */
 }
 body.theme-metal {
   background-color: #0d1117;
