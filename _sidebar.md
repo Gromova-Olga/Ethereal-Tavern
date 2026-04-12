@@ -12,6 +12,7 @@
 - 🎛 Пресеты
   - [✍🏻Maren’s Red Pen📕 v1.0](presets/pack1.md)
   - [✍🏻Maren’s Red Pen📕 v1.5](presets/pack2.md)
+  - [✍🏻Maren’s Red Pen📕 v1.6](presets/pack3.md)
   - [Инфоблоки](presets/infoblock.md)
 
 
