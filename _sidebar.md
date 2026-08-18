@@ -16,8 +16,6 @@
   - [Инфоблоки](presets/infoblock.md)
 
 
-- [📖 Лорбуки](lorebooks/README.md)
-
 - [🤖 Боты](bots/README.md)
 
 - 💬 FAQ и поддержка
