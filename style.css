@@ -314,7 +314,7 @@ body.theme-metal .markdown-section {
 
 /* Обложка серии — широкий прямоугольник */
 .series-card {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 3 / 4;
 }
 
 /* Карточка бота/лорбука — портретная */
