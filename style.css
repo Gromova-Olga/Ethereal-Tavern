@@ -281,3 +281,106 @@ body.theme-metal .markdown-section {
   font-weight: bold;
   padding: 0 !important; /* Убираем лишние отступы от старого фона */
 }
+
+/* ==========================================
+   3. ГАЛЕРЕИ: СЕРИИ И БОТЫ/ЛОРБУКИ
+   ========================================== */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  margin: 30px 0;
+}
+
+/* Более мелкая сетка для карточек внутри серии (боты/лорбуки) */
+.card-grid.small-grid {
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+}
+
+.series-card,
+.item-card {
+  position: relative;
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  border: var(--nav-border);
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Обложка серии — широкий прямоугольник */
+.series-card {
+  aspect-ratio: 16 / 9;
+}
+
+/* Карточка бота/лорбука — портретная */
+.item-card {
+  aspect-ratio: 3 / 4;
+}
+
+.series-card:hover,
+.item-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.8);
+}
+
+/* Затемнение снизу, чтобы название читалось на любой картинке */
+.series-card::after,
+.item-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+.card-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 16px;
+  z-index: 2;
+  font-family: var(--theme-font);
+  font-weight: bold;
+  font-size: 1.35em;
+  color: #fff !important;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+}
+
+.item-card .card-title {
+  font-size: 1.05em;
+  padding: 12px;
+}
+
+.card-subtitle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 44px;
+  padding: 0 16px;
+  z-index: 2;
+  font-size: 0.8em;
+  color: #eee !important;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+/* Кнопка "скачать" на страницах отдельных ботов/лорбуков */
+.dl-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 22px;
+  border-radius: 8px;
+  border: var(--nav-border);
+  color: var(--text-headers) !important;
+  font-weight: bold;
+  text-decoration: none !important;
+  background: rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+}
+.dl-button:hover {
+  transform: scale(1.04);
+}
